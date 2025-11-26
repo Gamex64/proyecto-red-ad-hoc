@@ -26,7 +26,7 @@ void newConnectionCallback(uint32_t nodeId) {
   // Esto es solo para tu debug en el monitor Serial del IDE, si está abierto.
   // No afecta a Node-RED porque mesh.setDebugMsgTypes(NONE) lo ignora.
   // Pero lo dejamos si quieres ver las conexiones cuando no uses Node-RED.
-  //Serial.printf("🔗 MESH CONNECTED: %u\n", nodeId);
+  //Serial.printf(" MESH CONNECTED: %u\n", nodeId);
 }
 
 // ---------------------------
