@@ -43,19 +43,19 @@ void sendSensorData() {
 
 // ----------------- CALLBACKS DE MESH -----------------
 void receivedCallback(uint32_t from, String &msg) {
-  Serial.printf("📩 Mensaje recibido de nodo %u: %s\n", from, msg.c_str());
+  Serial.printf("Mensaje recibido de nodo %u: %s\n", from, msg.c_str());
 }
 
 void newConnectionCallback(uint32_t nodeId) {
-  Serial.printf("🔗 Nuevo nodo conectado: %u\n", nodeId);
+  Serial.printf("Nuevo nodo conectado: %u\n", nodeId);
 }
 
 void changedConnectionCallback() {
-  Serial.println("🔄 Cambios en la red mesh detectados");
+  Serial.println("Cambios en la red mesh detectados");
 }
 
 void nodeTimeAdjustedCallback(int32_t offset) {
-  Serial.printf("🕒 Tiempo ajustado por la red: %d\n", offset);
+  Serial.printf("Tiempo ajustado por la red: %d\n", offset);
 }
 
 // ----------------- SETUP -----------------
@@ -79,7 +79,7 @@ void setup() {
   mesh.onChangedConnections(&changedConnectionCallback);
   mesh.onNodeTimeAdjusted(&nodeTimeAdjustedCallback);
 
-  Serial.println("✅ Red mesh inicializada, buscando nodo root...");
+  Serial.println("Red mesh inicializada, buscando nodo root...");
 }
 
 // ----------------- LOOP -----------------
